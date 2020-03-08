@@ -1,6 +1,4 @@
-package com.cdy.base.util.bean
-
--util.bean;
+package com.cdy.base.util.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
