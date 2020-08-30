@@ -37,10 +37,10 @@ public class ClassUtil {
      */
     public static Method getGetterMethod(Class<?> cls, Field field) {
         try {
-            return cls.getMethod("get" + StringUtil.upperFirstLetter(field.getName()));
+            return cls.getMethod("get" + StrUtil.upperFirstLetter(field.getName()));
         } catch (Exception e) {
             try {
-                return cls.getMethod("is" + StringUtil.upperFirstLetter(field.getName()));
+                return cls.getMethod("is" + StrUtil.upperFirstLetter(field.getName()));
             } catch (Exception e1) {
                 return null;
             }
@@ -52,7 +52,7 @@ public class ClassUtil {
      */
     public static Method getSetterMethod(Class<?> cls, Field field) {
         try {
-            return cls.getMethod("set" + StringUtil.upperFirstLetter(field.getName()), field.getType());
+            return cls.getMethod("set" + StrUtil.upperFirstLetter(field.getName()), field.getType());
         } catch (Exception e) {
             return null;
         }

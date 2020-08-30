@@ -71,7 +71,7 @@ public class IdCardUtil {
         if (idCard.length() != CHINA_ID_MIN_LENGTH) {
             throw new IllegalArgumentException("idCard length is not 15");
         }
-        if (StringUtil.isNotNum(idCard)) {
+        if (StrUtil.isNotNum(idCard)) {
             throw new IllegalArgumentException("idCard is not num");
         }
         // 获取出生年月日
@@ -94,7 +94,7 @@ public class IdCardUtil {
             int iSum17 = getPowerSum(iCard);
             // 获取校验位
             String sVal = getCheckCode18(iSum17);
-            if (StringUtil.isNotEmpty(sVal)) {
+            if (StrUtil.isNotEmpty(sVal)) {
                 idCard18 += sVal;
             } else {
                 throw new IllegalArgumentException("get check code error");
@@ -124,7 +124,7 @@ public class IdCardUtil {
             String code17 = idCard.substring(0, 17);
             // 第18位
             String code18 = idCard.substring(17, CHINA_ID_MAX_LENGTH);
-            if (StringUtil.isNum(code17)) {
+            if (StrUtil.isNum(code17)) {
                 char[] cArr = code17.toCharArray();
                 if (cArr != null) {
                     int[] iCard = convertCharToInt(cArr);
@@ -153,7 +153,7 @@ public class IdCardUtil {
         if (idCard.length() != CHINA_ID_MIN_LENGTH) {
             return result;
         }
-        if (StringUtil.isNum(idCard)) {
+        if (StrUtil.isNum(idCard)) {
             String proCode = idCard.substring(0, 2);
             if (!IdCardCityCodeEnum.valid(Integer.valueOf(proCode))) {
                 return result;
@@ -380,7 +380,7 @@ public class IdCardUtil {
      */
     public static String getStandardBirthByIdCard(String idCard) {
         String birth = getNoHyphenBirthByIdCard(idCard);
-        if (StringUtil.isNotEmpty(birth)) {
+        if (StrUtil.isNotEmpty(birth)) {
             birth = birth.substring(0, 4) + "-" + birth.substring(4, 6) +
                     "-" + birth.substring(6, 8);
         }
@@ -392,7 +392,7 @@ public class IdCardUtil {
      */
     public static String getNoHyphenBirthByIdCard(String idCard) {
         String birthday = "";
-        if (StringUtil.isEmpty(idCard)) {
+        if (StrUtil.isEmpty(idCard)) {
             return birthday;
         }
         if (idCard.length() == CHINA_ID_MIN_LENGTH) {
@@ -409,7 +409,7 @@ public class IdCardUtil {
      */
     public static short getYearByIdCard(String idCard) {
         short birthdayYear = 0;
-        if (StringUtil.isEmpty(idCard)) {
+        if (StrUtil.isEmpty(idCard)) {
             return birthdayYear;
         }
         if (idCard.length() == CHINA_ID_MIN_LENGTH) {
@@ -426,7 +426,7 @@ public class IdCardUtil {
      */
     public static short getMonthByIdCard(String idCard) {
         short birthdayMonth = 0;
-        if (StringUtil.isEmpty(idCard)) {
+        if (StrUtil.isEmpty(idCard)) {
             return birthdayMonth;
         }
         if (idCard.length() == CHINA_ID_MIN_LENGTH) {
@@ -443,7 +443,7 @@ public class IdCardUtil {
      */
     public static short getDateByIdCard(String idCard) {
         short birthdayDay = 0;
-        if (StringUtil.isEmpty(idCard)) {
+        if (StrUtil.isEmpty(idCard)) {
             return birthdayDay;
         }
         if (idCard.length() == CHINA_ID_MIN_LENGTH) {
@@ -459,7 +459,7 @@ public class IdCardUtil {
      * 根据身份编号获取性别
      */
     public static GenderEnum getGenderByIdCard(String idCard) {
-        if (StringUtil.isEmpty(idCard)) {
+        if (StrUtil.isEmpty(idCard)) {
             return GenderEnum.UNKNOWN;
         }
         if (idCard.length() == CHINA_ID_MIN_LENGTH) {
@@ -481,7 +481,7 @@ public class IdCardUtil {
      */
     public static String getProvinceByIdCard(String idCard) {
         String sProvince = "";
-        if (StringUtil.isEmpty(idCard)) {
+        if (StrUtil.isEmpty(idCard)) {
             return sProvince;
         }
         int len = idCard.length();

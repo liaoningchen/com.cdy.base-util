@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class StringUtil extends StringUtils {
+public class StrUtil extends StringUtils {
 
     private static final Pattern PHONE_PATTERN =
             Pattern.compile("[1][3456789]\\d{9}");

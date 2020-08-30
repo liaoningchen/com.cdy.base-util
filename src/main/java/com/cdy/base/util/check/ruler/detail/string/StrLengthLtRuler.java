@@ -2,7 +2,7 @@ package com.cdy.base.util.check.ruler.detail.string;
 
 import com.cdy.base.util.check.ruler.BaseRuler;
 import com.cdy.base.util.exception.CheckException;
-import com.cdy.base.util.util.StringUtil;
+import com.cdy.base.util.util.StrUtil;
 
 import static com.cdy.base.util.check.ruler.CheckResultCodeEnum.*;
 
@@ -28,7 +28,7 @@ public class StrLengthLtRuler extends BaseRuler<String> {
         if (null == checkTarget) {
             return;
         }
-        if (StringUtil.isLengthLt(checkTarget, norm)) {
+        if (StrUtil.isLengthLt(checkTarget, norm)) {
             return;
         }
         throw new CheckException(failCode, String.format(failDesc, norm));

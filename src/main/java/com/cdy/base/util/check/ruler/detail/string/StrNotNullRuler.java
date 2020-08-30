@@ -2,7 +2,7 @@ package com.cdy.base.util.check.ruler.detail.string;
 
 import com.cdy.base.util.check.ruler.BaseRuler;
 import com.cdy.base.util.exception.CheckException;
-import com.cdy.base.util.util.StringUtil;
+import com.cdy.base.util.util.StrUtil;
 
 import static com.cdy.base.util.check.ruler.CheckResultCodeEnum.*;
 
@@ -19,7 +19,7 @@ public class StrNotNullRuler extends BaseRuler<String> {
 
     @Override
     public void check(String checkTarget) {
-        if (StringUtil.isNotNull(checkTarget)) {
+        if (StrUtil.isNotNull(checkTarget)) {
             return;
         }
         throw new CheckException(failCode, failDesc);

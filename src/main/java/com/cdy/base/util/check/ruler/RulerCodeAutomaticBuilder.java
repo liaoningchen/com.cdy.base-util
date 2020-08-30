@@ -3,7 +3,7 @@ package com.cdy.base.util.check.ruler;
 
 
 import com.cdy.base.util.util.CollectionUtil;
-import com.cdy.base.util.util.StringUtil;
+import com.cdy.base.util.util.StrUtil;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -278,7 +278,7 @@ public class RulerCodeAutomaticBuilder {
             if (rulerClassName.startsWith("Obj")) {
                 utilClassName = "ObjectUtil";
             } else if (rulerClassName.startsWith("Str")) {
-                utilClassName = "StringUtil";
+                utilClassName = "StrUtil";
             } else if (rulerClassName.startsWith("Date")) {
                 utilClassName = "DateUtil";
             } else if (rulerClassName.startsWith("Arr")) {
@@ -464,7 +464,7 @@ public class RulerCodeAutomaticBuilder {
     private void buildFactoryToRulerMethodCodeListMap() {
         for (String rulerClassName : rulerClassNameSet) {
             String normClass = isRulerContainsNormMap.get(rulerClassName);
-            boolean containsNorm = StringUtil.isNotEmpty(normClass);
+            boolean containsNorm = StrUtil.isNotEmpty(normClass);
 
             String factoryClassName = rulerClassNameToFactoryClassNameMap.get(rulerClassName);
 
@@ -617,7 +617,7 @@ public class RulerCodeAutomaticBuilder {
 
     private void printField() {
         String normClass = isRulerContainsNormMap.get(rulerClassName);
-        boolean containsNorm = StringUtil.isNotEmpty(normClass);
+        boolean containsNorm = StrUtil.isNotEmpty(normClass);
         if (containsNorm) {
             writer.println("    private " + normClass + " norm;");
         }
@@ -626,7 +626,7 @@ public class RulerCodeAutomaticBuilder {
 
     private void printConstructor() {
         String normClass = isRulerContainsNormMap.get(rulerClassName);
-        boolean containsNorm = StringUtil.isNotEmpty(normClass);
+        boolean containsNorm = StrUtil.isNotEmpty(normClass);
         writer.println("    public " + rulerClassName + "(" +
                 (containsNorm ? normClass + " norm" : "") +
                 ") {");
@@ -640,7 +640,7 @@ public class RulerCodeAutomaticBuilder {
 
     private void printUserDefinedFailCodeAndDescConstructor() {
         String normClass = isRulerContainsNormMap.get(rulerClassName);
-        boolean containsNorm = StringUtil.isNotEmpty(normClass);
+        boolean containsNorm = StrUtil.isNotEmpty(normClass);
         writer.println("    public " + rulerClassName + "(" +
                 (containsNorm ? normClass + " norm, " : "") +
                 "long failCode, String failDesc" +
@@ -654,7 +654,7 @@ public class RulerCodeAutomaticBuilder {
 
     private void printInit() {
         String normClass = isRulerContainsNormMap.get(rulerClassName);
-        boolean containsNorm = StringUtil.isNotEmpty(normClass);
+        boolean containsNorm = StrUtil.isNotEmpty(normClass);
         if (containsNorm) {
             writer.println("    private void init(" +
                     normClass + " norm, " +
@@ -670,7 +670,7 @@ public class RulerCodeAutomaticBuilder {
 
     private void printCheck() {
         String normClass = isRulerContainsNormMap.get(rulerClassName);
-        boolean containsNorm = StringUtil.isNotEmpty(normClass);
+        boolean containsNorm = StrUtil.isNotEmpty(normClass);
         writer.println("    @Override");
         writer.println("    public void check(" +
                 rulerClassNameToTargetClassNameMap.get(rulerClassName) + " checkTarget) {");
@@ -687,7 +687,7 @@ public class RulerCodeAutomaticBuilder {
         writer.println("            return;");
         writer.println("        }");
 
-        int numOfPlaceHolder = StringUtil.getNumOfSubStr(
+        int numOfPlaceHolder = StrUtil.getNumOfSubStr(
                 rulerClassNameToCheckResultCodeEnumMap.get(rulerClassName).getDesc(),
                 "%", true
         );

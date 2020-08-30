@@ -2,7 +2,7 @@ package com.cdy.base.util.log;
 
 
 import com.cdy.base.util.util.JsonUtil;
-import com.cdy.base.util.util.StringUtil;
+import com.cdy.base.util.util.StrUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
@@ -57,7 +57,7 @@ public class BaseLoggerDecorator implements LoggerDecorator {
 
     @Override
     public String getBusinessPrefix() {
-        return StringUtil.isEmpty(BUSINESS_PREFIX_THREAD_LOCAL.get()) ?
+        return StrUtil.isEmpty(BUSINESS_PREFIX_THREAD_LOCAL.get()) ?
                 "noLogDesc" : BUSINESS_PREFIX_THREAD_LOCAL.get();
     }
 
@@ -69,14 +69,14 @@ public class BaseLoggerDecorator implements LoggerDecorator {
 
     @Override
     public String getLogId() {
-        return StringUtil.isEmpty(LOG_ID_THREAD_LOCAL.get()) ?
+        return StrUtil.isEmpty(LOG_ID_THREAD_LOCAL.get()) ?
                 "0" : LOG_ID_THREAD_LOCAL.get();
     }
 
     private String buildLogStr(String msg) {
-        boolean needPrefixBracket = StringUtil.isNotEmpty(msg) && !msg.contains("【");
-        boolean needSuffixBracket = StringUtil.isNotEmpty(msg) && !msg.contains("】");
-        String logStr = StringUtil.join(
+        boolean needPrefixBracket = StrUtil.isNotEmpty(msg) && !msg.contains("【");
+        boolean needSuffixBracket = StrUtil.isNotEmpty(msg) && !msg.contains("】");
+        String logStr = StrUtil.join(
                 needPrefixBracket ? "【 " : "",
                 msg,
                 needSuffixBracket ? " 】" : "",
@@ -86,7 +86,7 @@ public class BaseLoggerDecorator implements LoggerDecorator {
 
     private String addLogIdAndBusinessPrefix(String logStr) {
         String prefixBracket = "【";
-        if (StringUtil.isEmpty(logStr) || !logStr.contains(prefixBracket)) {
+        if (StrUtil.isEmpty(logStr) || !logStr.contains(prefixBracket)) {
             return logStr;
         }
         int index = logStr.indexOf("【");
@@ -97,13 +97,13 @@ public class BaseLoggerDecorator implements LoggerDecorator {
 
     private String addLogId(int index, String logStr) {
         StringBuilder sb = new StringBuilder(logStr);
-        sb.insert(index, StringUtil.join("logId:", getLogId() + " "));
+        sb.insert(index, StrUtil.join("logId:", getLogId() + " "));
         return sb.toString();
     }
 
     private String addBusinessPrefix(int index, String logStr) {
         StringBuilder sb = new StringBuilder(logStr);
-        sb.insert(index + 1, StringUtil.join(" ", getBusinessPrefix(), " -"));
+        sb.insert(index + 1, StrUtil.join(" ", getBusinessPrefix(), " -"));
         return sb.toString();
     }
 
