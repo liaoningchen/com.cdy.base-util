@@ -7,10 +7,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author: liurenpeng
- * @date: Created in 2017-11-9
- */
+
 public class MapUtil extends MapUtils {
 
     private MapUtil() {

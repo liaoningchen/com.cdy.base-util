@@ -1,15 +1,13 @@
 package com.cdy.base.util.util;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class MD5Util {
-	private static final Logger LOG = LoggerFactory.getLogger(MD5Util.class);
 
 	public MD5Util()
 	{
@@ -35,9 +33,7 @@ public class MD5Util {
 
 			return new String(result);
 		} catch (NoSuchAlgorithmException e) {
-            LOG.error(e.getMessage(),e);
 		} catch (UnsupportedEncodingException e) {
-            LOG.error(e.getMessage(),e);
 		}
 		return null;
 	}

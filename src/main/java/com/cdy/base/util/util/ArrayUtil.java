@@ -5,10 +5,6 @@ import org.apache.commons.lang3.ArrayUtils;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author: liurenpeng
- * @date: Created in 17-11-17
- */
 public class ArrayUtil extends ArrayUtils {
 
     private ArrayUtil() {

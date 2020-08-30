@@ -4,10 +4,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author: liurenpeng
- * @date: Created in 17-11-21
- */
+
 public class BeanUtil {
 
     private static final Byte BYTE_DEFAULT_VALUE = 0;

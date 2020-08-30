@@ -5,10 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * @author: liurenpeng@daojia.com
- * @date: Created in 14:53 2017-10-16
- */
+
 public class StringUtil extends StringUtils {
 
     private static final Pattern PHONE_PATTERN =

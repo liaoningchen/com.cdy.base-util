@@ -1,6 +1,5 @@
 package com.cdy.base.util.util;
 
-import com.daojia.khpt.util.base.constant.DateFormatCnst;
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
@@ -16,10 +15,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-/**
- * @author: liurenpeng
- * @date: Created in 2017-11-3
- */
+
 public class JsonUtil {
 
     private static final Gson gson;
@@ -119,15 +115,15 @@ public class JsonUtil {
         private final DateFormat isoFormat = buildIsoFormat();
 
         private DateFormat buildStandardDateFormat() {
-            return new SimpleDateFormat(DateFormatCnst.STANDARD_DATE_FORMAT, Locale.CHINA);
+            return new SimpleDateFormat(DateUtil.DateFormatCnst.STANDARD_DATE_FORMAT, Locale.CHINA);
         }
 
         private DateFormat buildStandardTimeFormat() {
-            return new SimpleDateFormat(DateFormatCnst.STANDARD_DATETIME_FORMAT, Locale.CHINA);
+            return new SimpleDateFormat(DateUtil.DateFormatCnst.STANDARD_DATETIME_FORMAT, Locale.CHINA);
         }
 
         private DateFormat buildIsoFormat() {
-            DateFormat iso8601Format = new SimpleDateFormat(DateFormatCnst.ISO_8601_FORMAT, Locale.US);
+            DateFormat iso8601Format = new SimpleDateFormat(DateUtil.DateFormatCnst.ISO_8601_FORMAT, Locale.US);
             iso8601Format.setTimeZone(TimeZone.getTimeZone("UTC"));
             return iso8601Format;
         }

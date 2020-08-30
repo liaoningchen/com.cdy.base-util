@@ -1,18 +1,13 @@
 package com.cdy.base.util.check.ruler.detail.collection;
 
-import com.daojia.khpt.util.base.check.CheckException;
-import com.daojia.khpt.util.base.check.ruler.BaseRuler;
-import com.daojia.khpt.util.base.util.CollectionUtil;
+import com.cdy.base.util.check.ruler.BaseRuler;
+import com.cdy.base.util.exception.CheckException;
+import com.cdy.base.util.util.CollectionUtil;
 
 import java.util.Collection;
 
-import static com.daojia.khpt.util.base.check.CheckResultCodeEnum.*;
-import static com.daojia.khpt.util.base.check.CheckResultCodeEnum.COLL_NOT_EMPTY_FAIL;
+import static com.cdy.base.util.check.ruler.CheckResultCodeEnum.*;
 
-/**
- * @author: liurenpeng
- * @date: Created in 2017-11-12
- */
 public class CollNotEmptyRuler extends BaseRuler<Collection> {
 
 

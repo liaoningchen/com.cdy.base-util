@@ -1,9 +1,6 @@
 package com.cdy.base.util.util;
 
-/**
- * @author: liurenpeng
- * @date: Created in 17-11-24
- */
+
 public class NumberUtil {
 
     private NumberUtil() {

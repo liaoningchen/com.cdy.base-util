@@ -1,14 +1,11 @@
 package com.cdy.base.util.check.ruler.summary;
 
-import com.daojia.khpt.util.base.check.ruler.Ruler;
-import com.daojia.khpt.util.base.check.ruler.detail.collection.*;
+
+import com.cdy.base.util.check.ruler.Ruler;
+import com.cdy.base.util.check.ruler.detail.collection.*;
 
 import java.util.Collection;
 
-/**
- * @author: liurenpeng
- * @date: Created in 2017-11-12
- */
 public class CollRuler {
 
     public static Ruler<Collection> notEmpty() {

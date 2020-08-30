@@ -1,18 +1,16 @@
 package com.cdy.base.util.util;
 
-import com.daojia.khpt.util.base.check.CheckUtil;
-import com.daojia.khpt.util.base.check.ruler.summary.StrRuler;
-import com.daojia.khpt.util.base.enumeration.GenderEnum;
+
+
+import com.cdy.base.util.check.CheckUtil;
+import com.cdy.base.util.check.ruler.summary.StrRuler;
+import com.cdy.base.util.enumeration.GenderEnum;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * @author: liurenpeng
- * @date: Created in 2017-10-13
- */
 public class IdCardUtil {
 
     /**

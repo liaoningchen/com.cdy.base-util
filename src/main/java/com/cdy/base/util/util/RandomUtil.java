@@ -3,10 +3,6 @@ package com.cdy.base.util.util;
 import java.util.Random;
 import java.util.UUID;
 
-/**
- * @author: liurenpeng
- * @date: Created in 17-11-24
- */
 public class RandomUtil {
 
     private static final Random random = new Random();

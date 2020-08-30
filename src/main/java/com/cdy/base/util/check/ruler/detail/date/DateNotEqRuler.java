@@ -1,18 +1,13 @@
 package com.cdy.base.util.check.ruler.detail.date;
 
-import com.daojia.khpt.util.base.check.CheckException;
-import com.daojia.khpt.util.base.check.ruler.BaseRuler;
-import com.daojia.khpt.util.base.util.DateUtil;
+import com.cdy.base.util.check.ruler.BaseRuler;
+import com.cdy.base.util.exception.CheckException;
+import com.cdy.base.util.util.DateUtil;
 
 import java.util.Date;
 
-import static com.daojia.khpt.util.base.check.CheckResultCodeEnum.*;
-import static com.daojia.khpt.util.base.check.CheckResultCodeEnum.DATE_NOT_EQ_FAIL;
+import static com.cdy.base.util.check.ruler.CheckResultCodeEnum.DATE_NOT_EQ_FAIL;
 
-/**
- * @author: liurenpeng
- * @date: Created in 2017-11-12
- */
 public class DateNotEqRuler extends BaseRuler<Date> {
 
     private Date norm;

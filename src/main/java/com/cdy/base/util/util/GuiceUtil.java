@@ -3,10 +3,6 @@ package com.cdy.base.util.util;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
-/**
- * @author: liurenpeng
- * @date: Created in 17-12-7
- */
 public class GuiceUtil {
 
     private GuiceUtil() {

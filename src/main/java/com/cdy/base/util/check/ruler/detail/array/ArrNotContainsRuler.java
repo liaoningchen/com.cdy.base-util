@@ -1,16 +1,10 @@
 package com.cdy.base.util.check.ruler.detail.array;
+import com.cdy.base.util.check.ruler.BaseRuler;
+import com.cdy.base.util.exception.CheckException;
+import com.cdy.base.util.util.ArrayUtil;
 
-import com.daojia.khpt.util.base.check.CheckException;
-import com.daojia.khpt.util.base.check.ruler.BaseRuler;
-import com.daojia.khpt.util.base.util.ArrayUtil;
+import static com.cdy.base.util.check.ruler.CheckResultCodeEnum.*;
 
-import static com.daojia.khpt.util.base.check.CheckResultCodeEnum.*;
-import static com.daojia.khpt.util.base.check.CheckResultCodeEnum.ARR_NOT_CONTAINS_FAIL;
-
-/**
- * @author: liurenpeng
- * @date: Created in 2017-11-12
- */
 public class ArrNotContainsRuler extends BaseRuler<Object[]> {
 
     private Object norm;

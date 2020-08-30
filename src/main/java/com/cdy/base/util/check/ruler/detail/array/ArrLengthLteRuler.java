@@ -1,16 +1,12 @@
 package com.cdy.base.util.check.ruler.detail.array;
 
-import com.daojia.khpt.util.base.check.CheckException;
-import com.daojia.khpt.util.base.check.ruler.BaseRuler;
-import com.daojia.khpt.util.base.util.ArrayUtil;
 
-import static com.daojia.khpt.util.base.check.CheckResultCodeEnum.*;
-import static com.daojia.khpt.util.base.check.CheckResultCodeEnum.ARR_LENGTH_LTE_FAIL;
+import com.cdy.base.util.check.ruler.BaseRuler;
+import com.cdy.base.util.exception.CheckException;
+import com.cdy.base.util.util.ArrayUtil;
 
-/**
- * @author: liurenpeng
- * @date: Created in 2017-11-12
- */
+import static com.cdy.base.util.check.ruler.CheckResultCodeEnum.ARR_LENGTH_LTE_FAIL;
+
 public class ArrLengthLteRuler extends BaseRuler<Object[]> {
 
     private int norm;

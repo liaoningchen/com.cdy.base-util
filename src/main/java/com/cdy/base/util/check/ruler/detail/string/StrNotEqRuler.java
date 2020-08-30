@@ -1,16 +1,11 @@
 package com.cdy.base.util.check.ruler.detail.string;
 
-import com.daojia.khpt.util.base.check.CheckException;
-import com.daojia.khpt.util.base.check.ruler.BaseRuler;
-import com.daojia.khpt.util.base.util.StringUtil;
+import com.cdy.base.util.check.ruler.BaseRuler;
+import com.cdy.base.util.exception.CheckException;
+import com.cdy.base.util.util.StringUtil;
 
-import static com.daojia.khpt.util.base.check.CheckResultCodeEnum.*;
-import static com.daojia.khpt.util.base.check.CheckResultCodeEnum.STR_NOT_EQ_FAIL;
+import static com.cdy.base.util.check.ruler.CheckResultCodeEnum.*;
 
-/**
- * @author: liurenpeng
- * @date: Created in 2017-11-12
- */
 public class StrNotEqRuler extends BaseRuler<String> {
 
     private String norm;

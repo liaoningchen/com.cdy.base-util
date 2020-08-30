@@ -1,7 +1,6 @@
 package com.cdy.base.util.util;
 
-import com.daojia.khpt.util.base.constant.DateFormatCnst;
-import com.daojia.khpt.util.base.enumeration.WeekEnum;
+import com.cdy.base.util.enumeration.WeekEnum;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.apache.commons.lang3.time.DateUtils;
 
@@ -9,10 +8,7 @@ import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * @author: liurenpeng@daojia.com
- * @date: Created in 14:53 2017-10-16
- */
+
 public class DateUtil extends DateUtils {
 
     private DateUtil() {
@@ -194,4 +190,11 @@ public class DateUtil extends DateUtils {
         return !isEq(target, norm);
     }
 
+    public class DateFormatCnst {
+
+        public static final String STANDARD_DATE_FORMAT = "yyyy-MM-dd";
+        public static final String STANDARD_DATETIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
+        public static final String ISO_8601_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+
+    }
 }

@@ -6,10 +6,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-/**
- * @author: liurenpeng
- * @date: Created in 18-12-21
- */
+
 public class FunctionUtil {
 
     public static <T, R> Function<T, R> tryOfF(UncheckedFunction<T, R> function) {

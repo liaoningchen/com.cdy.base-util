@@ -1,12 +1,9 @@
 package com.cdy.base.util.check.ruler.summary;
 
-import com.daojia.khpt.util.base.check.ruler.Ruler;
-import com.daojia.khpt.util.base.check.ruler.detail.number.*;
 
-/**
- * @author: liurenpeng
- * @date: Created in 2017-11-12
- */
+import com.cdy.base.util.check.ruler.Ruler;
+import com.cdy.base.util.check.ruler.detail.number.*;
+
 public class IntRuler {
 
     public static Ruler<Integer> eq(Integer norm) {

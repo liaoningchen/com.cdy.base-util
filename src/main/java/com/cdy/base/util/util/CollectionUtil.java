@@ -6,14 +6,11 @@ import org.apache.commons.collections.CollectionUtils;
 
 import java.util.*;
 
-import static com.daojia.khpt.util.base.check.CheckUtil.check;
-import static com.daojia.khpt.util.base.check.ruler.summary.LongRuler.gt;
-import static com.daojia.khpt.util.base.check.ruler.summary.LongRuler.lte;
+import static com.cdy.base.util.check.CheckUtil.check;
+import static com.cdy.base.util.check.ruler.summary.LongRuler.gt;
+import static com.cdy.base.util.check.ruler.summary.LongRuler.lte;
 
-/**
- * @author: liurenpeng@daojia.com
- * @date: Created in 14:53 2017-10-11
- */
+
 public class CollectionUtil extends CollectionUtils {
 
     private CollectionUtil() {

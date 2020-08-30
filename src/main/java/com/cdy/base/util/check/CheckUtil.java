@@ -1,7 +1,7 @@
 package com.cdy.base.util.check;
 
+import com.cdy.base.util.check.ruler.Ruler;
 import com.cdy.base.util.exception.CheckException;
-import com.cdy.base.util.ruler.Ruler;
 
 import java.util.Arrays;
 
@@ -9,7 +9,7 @@ public class CheckUtil {
     private CheckUtil (){}
 
     @SafeVarargs
-    public static <T> CheckHandler check(final T target, Ruler<T> ... rulers){
+    public static <T> CheckHandler check(final T target, Ruler<T>... rulers){
         return CheckUtil.check(target,"",rulers);
     }
     @SafeVarargs

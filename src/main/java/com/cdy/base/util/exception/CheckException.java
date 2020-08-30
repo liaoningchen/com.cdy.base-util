@@ -32,7 +32,7 @@ public class CheckException extends RuntimeException{
         return "code=" + code + ", desc=" + desc;
     }
 
-    void setDesc(String desc) {
+    public void setDesc(String desc) {
         this.desc = desc;
     }
 }

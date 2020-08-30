@@ -1,14 +1,11 @@
 package com.cdy.base.util.check.ruler.summary;
 
-import com.daojia.khpt.util.base.check.ruler.Ruler;
-import com.daojia.khpt.util.base.check.ruler.detail.date.*;
+
+import com.cdy.base.util.check.ruler.Ruler;
+import com.cdy.base.util.check.ruler.detail.date.*;
 
 import java.util.Date;
 
-/**
- * @author: liurenpeng
- * @date: Created in 2017-11-12
- */
 public class DateRuler {
 
     public static Ruler<Date> eq(Date norm) {

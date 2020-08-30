@@ -1,9 +1,6 @@
 package com.cdy.base.util.util;
 
-/**
- * @author: liurenpeng
- * @date: Created in 18-5-24
- */
+
 public class CastUtil {
 
     /**

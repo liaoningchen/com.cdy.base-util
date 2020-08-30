@@ -1,16 +1,11 @@
 package com.cdy.base.util.check.ruler.detail.object;
 
-import com.daojia.khpt.util.base.check.CheckException;
-import com.daojia.khpt.util.base.check.ruler.BaseRuler;
-import com.daojia.khpt.util.base.util.ObjectUtil;
+import com.cdy.base.util.check.ruler.BaseRuler;
+import com.cdy.base.util.exception.CheckException;
+import com.cdy.base.util.util.ObjectUtil;
 
-import static com.daojia.khpt.util.base.check.CheckResultCodeEnum.*;
-import static com.daojia.khpt.util.base.check.CheckResultCodeEnum.OBJ_NOT_NULL_FAIL;
+import static com.cdy.base.util.check.ruler.CheckResultCodeEnum.*;
 
-/**
- * @author: liurenpeng
- * @date: Created in 2017-11-12
- */
 public class ObjNotNullRuler extends BaseRuler<Object> {
 
 

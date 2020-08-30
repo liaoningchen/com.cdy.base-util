@@ -6,10 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 
-/**
- * @author: liurenpeng
- * @date: Created in 18-5-24
- */
+
 public class PropsUtil {
 
 

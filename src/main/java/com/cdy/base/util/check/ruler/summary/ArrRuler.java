@@ -1,12 +1,8 @@
 package com.cdy.base.util.check.ruler.summary;
 
-import com.daojia.khpt.util.base.check.ruler.Ruler;
-import com.daojia.khpt.util.base.check.ruler.detail.array.*;
+import com.cdy.base.util.check.ruler.Ruler;
+import com.cdy.base.util.check.ruler.detail.array.*;
 
-/**
- * @author: liurenpeng
- * @date: Created in 2017-11-12
- */
 public class ArrRuler {
 
     public static Ruler<Object[]> notEmpty() {

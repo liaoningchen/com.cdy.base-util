@@ -6,10 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Stream;
 
-/**
- * @author: liurenpeng
- * @date: Created in 18-1-2
- */
+
 public class ClassUtil {
 
     private static String OBJECT_CLASS_NAME = "java.lang.Object";

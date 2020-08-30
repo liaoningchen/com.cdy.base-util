@@ -1,8 +1,9 @@
 package com.cdy.base.util.check.ruler;
 
-import com.daojia.khpt.util.base.check.CheckResultCodeEnum;
-import com.daojia.khpt.util.base.util.CollectionUtil;
-import com.daojia.khpt.util.base.util.StringUtil;
+
+
+import com.cdy.base.util.util.CollectionUtil;
+import com.cdy.base.util.util.StringUtil;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -10,9 +11,7 @@ import java.io.PrintWriter;
 import java.util.*;
 
 /**
- * @author: liurenpeng
  * @description: ruler类代码自动生成工具
- * @date: Created in 17-11-24
  */
 public class RulerCodeAutomaticBuilder {
 

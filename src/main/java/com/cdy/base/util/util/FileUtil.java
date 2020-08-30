@@ -2,10 +2,7 @@ package com.cdy.base.util.util;
 
 import java.io.File;
 
-/**
- * @author: liurenpeng
- * @date: Created in 18-12-21
- */
+
 public class FileUtil {
 
     public static void mkdirIfNotExists(String dirPath) {

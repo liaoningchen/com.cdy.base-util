@@ -9,11 +9,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-/**
- * @auther: liansheng
- * @Date: 2020/2/8 16:49
- * @Description:
- */
+
 public class DSFResponseHandler<T> {
 
     private final Response<?, T> response;
