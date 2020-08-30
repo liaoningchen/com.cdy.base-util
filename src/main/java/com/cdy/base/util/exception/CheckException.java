@@ -1,32 +1,38 @@
 package com.cdy.base.util.exception;
 
+import lombok.Getter;
+
 public class CheckException extends RuntimeException{
-    private int code;
+
+    /**
+     * 校验结果码
+     */
+    @Getter
+    private long code;
+
+    /**
+     * 校验结果描述
+     */
+    @Getter
     private String desc;
-    public CheckException(){
 
-    }
-    public CheckException(int code, String desc) {
+    public CheckException(long code, String desc) {
         this.code = code;
         this.desc = desc;
     }
 
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
+    public CheckException(long code, String desc, CheckException e) {
+        super(e);
         this.code = code;
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
         this.desc = desc;
     }
+
+    @Override
     public String getMessage() {
-        return "code=" + this.code + ", desc=" + this.desc;
+        return "code=" + code + ", desc=" + desc;
+    }
+
+    void setDesc(String desc) {
+        this.desc = desc;
     }
 }
